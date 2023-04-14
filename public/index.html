@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+ 
+    
+    <link rel="stylesheet" href="index.css">
+    <link href="https://fonts.googleapis.com/css?family=Kaushan+Script|Montserrat:400,700&amp;subset=cyrillic-ext" rel="stylesheet"> 
+    <script src="https://unpkg.com/react-dom/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/prop-types/prop-types.min.js"></script>
+    <script src="https://unpkg.com/recharts/umd/Recharts.js"></script>
+    <title>Covid-19</title>
+  </head>
+  <body>
+
+ <header class="header">
+            <div class="header__inner">
+                <div class="header__logoimages"><img src="images/logo.jpg" alt="Минздрав"  width="100px" height="100px" ></div> 
+                <div class="header__logo">COVID-19</div>
+                <div class="header__search">
+                    <input class="text-field__input" type="text" name="search" size="50" value="">
+                </div>
+                <div class="header__button"><a href="" class="btn btn1">Поиск</a></div>  
+    
+                <nav class="nav">
+                    <a class="nav__link" href="#"><img src="images/telegram.png" alt="telegram"  width="25px" height="25px"></a>
+                    <a class="nav__link" href="#"><img src="images/facebook.png" alt="facebook"  width="25px" height="25px"></a>
+                    <a class="nav__link" href="#"><img src="images/whatsapp.png" alt="whatsapp"  width="25px" height="25px"></a>
+                    <a class="nav__link" href="#"><img src="images/instagram.png" alt="instagram"  width="25px" height="25px"></a>
+                </nav>
+            </div>
+    </header>
+
+    <div class="statics">        
+            <div class="stat">
+                <div id=stat_item1>
+                    <h1 style="color: rgb(15, 44, 139);">617836</h1> 
+                    <h4 style="color: rgb(15, 44, 139);">Всего выявлено</h4>
+                </div>
+                <div id=stat_item2>
+                    <h1 style="color: rgb(32, 75, 69);">504008</h1> 
+                    <h4 style="color:rgb(32, 75, 69);">Всего выздоровело</h4>
+                </div>
+                <div id=stat_item3>
+                    <h1 style="color:rgb(133, 43, 28);">12069</h1> 
+                    <h4 style="color:rgb(133, 43, 28);">Всего умерло</h4>
+                </div>
+                <div id=stat_item4>
+                    <h1 style="color:rgb(180, 158, 34);" >97</h1> 
+                    <h4 style="color:rgb(180, 158, 34);" > Подозрительные случаи</h4>
+                </div>
+                <div id=stat_item5>
+                    <h1 style="color:rgb(197, 125, 18);" >1050</h1> 
+                    <h4 style="color:rgb(197, 125, 18);" >Под наблюдением</h4>
+                </div>
+            </div>
+    </div>
+
+    <div class="mapAndgraphics"> 
+        <div class=containermapAndgraphics>
+            <div class="map"> 
+                <object type="image/svg+xml" data="PridnestroviaMap.svg"> 
+                    <img src="PridnestroviaMap.svg">
+                </object>                
+            </div>
+
+
+            <div class="charts">
+                <div id="charts_silk_dead_recovered"> </div>
+                <div id="charts_situationInCity">
+                    <div id="chartTinyBarsituationInCity"> </div>
+                    <div id="chartPiesituationInCity"> </div>
+                </div>
+            </div>
+
+        </div>
+    </div> 
+
+    <div class="charts__registerCasesAdeaths_byAgeSex"> 
+        <div class=containercharts__registerCasesAdeaths_byAgeSex>
+            <h1 style="width: 50%">Женщины</h1>
+            <h1 style="width: 50%">Мужчины</h1>
+        </div>
+        <div class=containercharts__registerCasesAdeaths_byAgeSex>
+           <div id="charts__registerCasesAdeaths_byAgeWoman"> </div>
+           <div id="charts__registerCasesAdeaths_byAgeMan"> </div>
+        </div>
+    </div>
+
+
+        
+        <div id="charts__vaccine"> </div> 
+
+
+  </body>
+</html>
