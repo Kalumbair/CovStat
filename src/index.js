@@ -21,7 +21,7 @@ import dataPiesituationInCity from './chartDataPiesituationInCity'
 const chartSilkDeadRecovered = document.getElementById('charts_silk_dead_recovered');
 if(chartSilkDeadRecovered){
 ReactDOM.createRoot(chartSilkDeadRecovered).render(
-<ResponsiveContainer minWidth={250} minHeight={200} width="100%" height="100%" >
+<ResponsiveContainer minWidth={730} minHeight={250} width="100%" height="100%" >
   <ComposedChart data={data1} margin={{top: 20, right: 80, bottom: 20, left: 20, }}>
           <CartesianGrid stroke="#f5f5f5" />
           <XAxis dataKey="name" label={{ position: 'insideBottomRight', offset: 0 }} scale="band" />
