@@ -1,4 +1,4 @@
-import ReactDOM, { createRoot} from 'react-dom/client';
+import ReactDOM, {createRoot} from 'react-dom/client';
 import React from 'react';
 import './index.css';
 
@@ -21,7 +21,7 @@ import dataPiesituationInCity from './chartDataPiesituationInCity'
 const chartSilkDeadRecovered = document.getElementById('charts_silk_dead_recovered');
 if(chartSilkDeadRecovered){
 ReactDOM.createRoot(chartSilkDeadRecovered).render(
-<ResponsiveContainer width="100%" height="100%" >
+<ResponsiveContainer minWidth={350} minHeight={150} width="100%" height="100%" >
   <ComposedChart data={data1} margin={{top: 20, right: 80, bottom: 20, left: 20, }}>
           <CartesianGrid stroke="#f5f5f5" />
           <XAxis dataKey="name" label={{ position: 'insideBottomRight', offset: 0 }} scale="band" />
@@ -43,8 +43,8 @@ const chartTinyBarsituationInCity = document.getElementById('chartTinyBarsituati
 
 if (chartTinyBarsituationInCity) {
   ReactDOM.createRoot(chartTinyBarsituationInCity).render(
-    <ResponsiveContainer width="100%" height="100%" >
- <BarChart  data={dataSituationInCity} layout="vertical" 
+    <ResponsiveContainer minWidth={150} minHeight={100} width="100%" height="100%" >
+ <BarChart data={dataSituationInCity} layout="vertical" 
     > 
       <CartesianGrid strokeDasharray="3 3" /> 
       <XAxis type="number" hide={true} /> 
@@ -80,8 +80,8 @@ if (chartTinyBarsituationInCity) {
 
   if (chartPiesituationInCity) {
     ReactDOM.createRoot(chartPiesituationInCity).render(
-      <ResponsiveContainer width="100%" height="100%" >
-        <PieChart>
+      <ResponsiveContainer minWidth={300} minHeight={300} width="100%" height="100%" >
+        <PieChart width={400} height={400}>
       <Pie 
         data={dataPiesituationInCity} 
         dataKey="value" 
