@@ -174,92 +174,34 @@ body {
 
 /* Statistics*/
 .statics{
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  padding: 20px; 
-}
-
-@media (max-width:850px){
-  .statics{
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  
-}
-
-.stat{
-  display: flex;
-  align-items: stretch;
-  padding: 0 5px;
-  flex-wrap: wrap;
+  padding: 10px;
   height: 10%;
 }
 
-#stat_item1,
-#stat_item2,
-#stat_item3,
-#stat_item4,
-#stat_item5 
+.stat{
+  display: flex;  
+  flex-direction: row;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 10px;
+}
+
+#all,
+#healthy,
+#dead,
+#suspicious,
+#control
  {
   width: 200px;
   height: 140px;
-  background-color: #fff;
-  color: #000000;
-  border-radius: 20px;
-  text-align: center;
+  padding: 20px;
+  border-radius: 8px;
 }
 
-.statics .stat_item::before,
-.statics .stat_item::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  transition: all 0.3s ease-in-out;
-}
-
-.statics .stat_item:hover::before {
-  background-color: var(--bg-color);
-}
-
-.statics .stat_item:hover::after {
-  color: #ffffff;
-}
-
-.statics .stat_item:nth-child(1)::before {
-  --bg-color: rgb(15, 44, 139);
-}
-
-.statics .stat_item:nth-child(2)::before {
-  --bg-color: rgb(32, 75, 69);
-}
-
-.statics .stat_item:nth-child(3)::before {
-  --bg-color: rgb(133, 43, 28);
-}
-
-.statics .stat_item:nth-child(4)::before {
-  --bg-color: rgb(180, 158, 34);
-}
-
-.statics .stat_item:nth-child(5)::before {
-  --bg-color: rgb(197, 125, 18);
-}
-
-.statics .stat_item h1,
-.statics .stat_item h4 {
-  position: relative;
-  z-index: 1;
-}
-
-.statics .stat_item:hover h1,
-.statics .stat_item:hover h4 {
-  color: #ffffff !important;
-}
 
 
 
@@ -295,12 +237,12 @@ body {
 
 #charts_silk_dead_recovered{
   width: 100%;  
-  height: 50%;
+  height: 30%;
 }
 
 #charts_situationInCity {
   width: 100%;  
-  height: 50%;
+  height: 40%;
   display: flex;
   flex-direction: row;
   flex-grow: 1;
@@ -314,8 +256,20 @@ body {
   width: 35%;
 }
 
+.charts__registerCasesAdeaths_byAgeSex{
+  width: 100%;  
+  height: 30%;
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+}
 
-@media (max-width: 700px) {
+#charts__registerCasesAdeaths_byAgeWoman,
+#charts__registerCasesAdeaths_byAgeMan{
+  width: 50%; 
+}
+
+@media (max-width: 760px) {
   .containermapAndgraphics {
     display: flex;
     flex-direction: column;
@@ -335,32 +289,11 @@ body {
     display: flex;
     flex-direction: column;
   }
-}
 
-
-.charts__registerCasesAdeaths_byAgeSex{
-  padding: 10px;
-  height: 20%;
-}
-
-.containercharts__registerCasesAdeaths_byAgeSex{
-  display: flex;
-  width: 100%;
-  max-width: 90%;
-  margin: 0 auto;
-  flex-direction: row;
-}
-
-#charts__registerCasesAdeaths_byAgeWoman{
-  width: 50%;
-  height: 250px;
-  
-}
-
-#charts__registerCasesAdeaths_byAgeMan{
-  width: 50%;
-  height: 250px;
-  
+  .charts__registerCasesAdeaths_byAgeSex{
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 .charts_vaccine{
