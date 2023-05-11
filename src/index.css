@@ -27,149 +27,13 @@ body {
 .header {
   width: 100%;
   height: 10%;
-  padding-top: 30px;
-
-  position: relative;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 1000;
-}
-
-.header__inner {
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-
-.header__logo {
-  font-size: 30px;
-  font-weight: 700;
-  color: rgb(32, 75, 69);
-}
-
-.header__button{
-  padding: 0.375rem 0.75rem;
-
-}
-
-.btn{
-  position: relative;
-  display: block;
-  color: rgb(32, 75, 69);
-  height: 38px;
-  font-size: 14px;
-  font-family: "montserrat";
-  text-decoration: none;
-  margin: 30px 0;
-  border: 2px solid rgb(32, 75, 69);
-  padding: 7px 30px;
-  text-transform: uppercase;
-  overflow: hidden;
-  transition: 1s all ease;
-}
-.btn::before{
-    color: white;
-  background: rgb(32, 75, 69);   
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%,-50%);
-  z-index: -1;
-  transition: all 0.6s ease;
-}
-
-.btn1::before{
-  width: 0%;
-  height: 100%;
-}
-
-.btn1:hover::before{
-  width: 100%;
-}
-
-/* Search */
-.text-field__input {
-  display: block;
-  width: 100%;
-  height: calc(2.25rem + 2px);
-  padding: 0.375rem 0.75rem;
-  font-family: inherit;
-  font-size: 1rem;
-  font-weight: 400;
-  line-height: 1.5;
-  color: #212529;
-  background-color: #fff;
-  background-clip: padding-box;
-  border: 1px solid #bdbdbd;
-  border-radius: 0.25rem;
-  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-}
-
-.text-field__input::placeholder {
-  color: #212529;
-  opacity: 0.4;
-}
-
-.text-field__input:focus {
-  color: #212529;
-  background-color: #fff;
-  border-color: #bdbdbd;
-  outline: 0;
-  box-shadow: 0 0 0 0.2rem rgba(158, 158, 158, 0.25);
+  padding: 10px;
 }
 
 
-
-/* Nav social */
-.nav {
-  font-size: 14px;
-  text-transform: uppercase;
-  justify-content: space-between;
-}
-
-.nav__link {
-  display: inline-block;
-  vertical-align: top;
-  margin: 0 15px;
-  position: relative;
-
-  color: rgb(32, 75, 69);
-  text-decoration: none;
-
-  transition: color .1s linear;
-}
-
-.nav__link:after {
-  content: "";
-  display: block;
-  width: 100%;
-  height: 3px;
-
-  background-color: rgb(32, 75, 69);
-  opacity: 0;
-
-  position: absolute;
-  top: 100%;
-  left: 0;
-  z-index: 1;
-
-  transition: opacity .1s linear;
-}
-
-.nav__link:hover {
-  color: #fce38a;
-}
-
-.nav__link:hover:after,
-.nav__link.active:after {
-  opacity: 1;
-}
-
-.nav__link.active {
-  color: #fce38a;
-}
 
 
 /* Statistics*/
@@ -194,8 +58,7 @@ body {
 #healthy,
 #dead,
 #suspicious,
-#control
- {
+#control{
   width: 200px;
   height: 140px;
   padding: 20px;
@@ -203,8 +66,70 @@ body {
 }
 
 
+#all h1, #all h4 {
+  margin: 0;
+  color: rgb(15, 44, 139);
+}
 
+#all:hover {
+  background-color: rgb(15, 44, 139);
+}
 
+#all:hover h1, #all:hover h4{
+  color: rgb(255, 255, 255);
+}
+
+#healthy h1, #healthy h4 {
+  margin: 0;
+  color: rgb(32, 75, 69);
+}
+
+#healthy:hover {
+  background-color: rgb(32, 75, 69);
+}
+
+#healthy:hover h1, #healthy:hover h4{
+  color: rgb(255, 255, 255);
+}
+
+#dead h1, #dead h4 {
+  margin: 0;
+  color: rgb(133, 43, 28);
+}
+
+#dead:hover {
+  background-color: rgb(133, 43, 28);
+}
+
+#dead:hover h1, #dead:hover h4{
+  color: rgb(255, 255, 255);
+}
+
+#suspicious h1, #suspicious h4{
+  margin: 0;
+  color: rgb(180, 158, 34);
+}
+
+#suspicious:hover {
+  background-color: rgb(180, 158, 34);
+}
+
+#suspicious:hover h1, #suspicious:hover h4{
+  color: rgb(255, 255, 255);
+}
+
+#control h1,#control h4 {
+  margin: 0;
+  color: rgb(197, 125, 18);
+}
+
+#control:hover {
+  background-color: rgb(197, 125, 18);
+}
+
+#control:hover h1, #control:hover h4{
+  color: rgb(255, 255, 255);
+}
 
 /*Map and graphics */
 .mapAndgraphics {
@@ -215,10 +140,11 @@ body {
 .containermapAndgraphics{
   display: flex;
   flex-direction: row;
-  align-items: center;
-  max-width: 90%;
-  margin: 0 auto;
-  width: 100%;  
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  text-align: center;
+  margin: 10px;
 }
 
 .map {
@@ -230,9 +156,24 @@ body {
   width: 55%;
   display: flex;
   flex-direction: column;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-wrap: wrap;
   gap: 20px;
   padding: 10px 5px;
   box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+  .containermapAndgraphics {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .map,
+  .charts {
+    width: 100%;
+  }
 }
 
 #charts_silk_dead_recovered{
@@ -245,7 +186,10 @@ body {
   height: 40%;
   display: flex;
   flex-direction: row;
-  flex-grow: 1;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+
 }
 
 #chartTinyBarsituationInCity {
@@ -256,12 +200,26 @@ body {
   width: 35%;
 }
 
+@media (max-width: 768px) {
+  #charts_situationInCity {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #chartTinyBarsituationInCity,
+  #chartPiesituationInCity {
+    width: 100%;
+  }
+}
+
 .charts__registerCasesAdeaths_byAgeSex{
   width: 100%;  
   height: 30%;
   display: flex;
   flex-direction: row;
-  flex-grow: 1;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
 }
 
 #charts__registerCasesAdeaths_byAgeWoman,
@@ -269,30 +227,15 @@ body {
   width: 50%; 
 }
 
-@media (max-width: 760px) {
-  .containermapAndgraphics {
-    display: flex;
+@media (max-width: 768px) {
+  #charts__registerCasesAdeaths_byAgeSex {
     flex-direction: column;
     align-items: center;
   }
 
-  .block {
-    margin: 0 auto;
-  }
-
-  .charts {
-    display: flex;
-    flex-direction: column;
-  }
-
-  #charts_situationInCity {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .charts__registerCasesAdeaths_byAgeSex{
-    display: flex;
-    flex-direction: column;
+  #charts__registerCasesAdeaths_byAgeWoman,
+  #charts__registerCasesAdeaths_byAgeMan {
+    width: 100%;
   }
 }
 
