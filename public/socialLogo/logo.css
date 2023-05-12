@@ -1,0 +1,8 @@
+#facebook, #instagram, #telegram, #whatsapp{
+    fill: #4A7B39;
+}
+
+#facebook:hover, #instagram:hover, #telegram:hover, #whatsapp:hover{
+    fill: #AB2424;
+}
+
