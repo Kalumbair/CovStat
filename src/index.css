@@ -57,6 +57,7 @@ height: 25px;
 .statics{
   padding: 10px;
   height: 10%;
+  background-color: #d6d6d61a;
 }
 
 .stat{
@@ -260,4 +261,23 @@ height: 25px;
   height: 10%;
   width: 100%;  
   background-color: rgb(60, 144, 223);
+}
+
+
+
+/*Content on Map */
+
+.MapContent{
+    max-width: 760px;
+    padding: 35px 30px 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0,0,0,.1);
+    display: none;
+    position: absolute;
+    background-color: rgba(58, 58, 66, 0.144);
+}
+
+.contentDate{
+  display: flex;
+  flex-wrap: wrap;
 }

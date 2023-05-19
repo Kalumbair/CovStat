@@ -1,5 +1,6 @@
 #facebook, #instagram, #telegram, #whatsapp{
     fill: #4A7B39;
+    transition: fill 0.3s ease;
 }
 
 #facebook:hover, #instagram:hover, #telegram:hover, #whatsapp:hover{

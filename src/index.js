@@ -139,6 +139,37 @@ function renderChart(chartElement, data) {
 
 
 
+const MapComponent = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const handleBlockClick = () => {
+    setIsOpen(!isOpen);
+  };
+
+  return (
+    <div>
+      <div id="RCamenca" onClick={handleBlockClick}>
+        {/* Код блока с id="RCamenca" */}
+      </div>
+      {isOpen && (
+        <div className="MapContent">
+          <h4 id="titlu"></h4>
+          <div>
+            <h4 id="OperateDate"> Оперативные данные </h4>
+            <div className="contentDate">
+              <div id="silkR"></div>
+              <div id="healthR"></div>
+              <div id="deadR"></div>
+            </div>
+          </div>
+        </div>
+      )}
+    </div>
+  );
+};
+
+ReactDOM.render(<MapComponent />, document.getElementById('MapContent'));
+
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
